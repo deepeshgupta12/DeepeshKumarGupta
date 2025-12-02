@@ -63,6 +63,9 @@ Most repos started from a **genuine product problem** I was trying to solve, not
 - **[`brain-tumor-ai`](https://github.com/deepeshgupta12/brain-tumor-ai)**  
   An applied **computer vision project** on medical imaging & tumor detection – built to deepen practical understanding of CV in sensitive domains.
 
+- **[`Hotel Booking Cancellation Model`](https://github.com/deepeshgupta12/hotel-cancellation-model)**
+  End-to-end ML pipeline and FastAPI service that predicts hotel booking cancellations, exposes risk buckets, and supports both batch and real-time scoring.
+
 ### Portfolio & Personal
 
 - **[`DeepeshKumarGupta`](https://github.com/deepeshgupta12/DeepeshKumarGupta)**  
