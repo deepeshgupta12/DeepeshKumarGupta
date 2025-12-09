@@ -33,6 +33,9 @@ Most repos started from a **genuine product problem** I was trying to solve, not
 - **[`sqy-dse-llm`](https://github.com/deepeshgupta12/sqy-dse-llm)**  
   LLM-driven enhancements for **search, filters and exploration** – focused on making large catalog experiences feel conversational and guided.
 
+- **[`movie-recommendation-mvp`](https://github.com/deepeshgupta12/movie-recommendation-mvp)**
+  A local-first, production-style Movie Recommendation System built on MovieLens 20M — featuring hybrid candidate retrieval (popularity + item-item + ALS + genre signals), time-decay aware feature store, a trained ranker, FastAPI serving, and a Streamlit UI with posters + feedback-driven real-time personalization for end-to-end discovery and recommendation demos.
+
 ### LLM-Powered Content & Intelligence
 
 - **[`sy-pdp-content-llm`](https://github.com/deepeshgupta12/sy-pdp-content-llm)**  
