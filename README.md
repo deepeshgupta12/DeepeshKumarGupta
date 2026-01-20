@@ -36,6 +36,11 @@ Most repos started from a **genuine product problem** I was trying to solve, not
 - **[`movie-recommendation-mvp`](https://github.com/deepeshgupta12/movie-recommendation-mvp)**
   A local-first, production-style Movie Recommendation System built on MovieLens 20M — featuring hybrid candidate retrieval (popularity + item-item + ALS + genre signals), time-decay aware feature store, a trained ranker, FastAPI serving, and a Streamlit UI with posters + feedback-driven real-time personalization for end-to-end discovery and recommendation demos.
 
+### Evidence‑Bound Real‑Estate Intelligence
+
+- **[`stalled-project-news`](https://github.com/deepeshgupta12/stalled-project-news)**
+  Search‑first pipeline that generates evidence‑backed stalled/delayed project updates (JSON + HTML), with strict whitelisting and citation coverage verification  
+
 ### LLM-Powered Content & Intelligence
 
 - **[`sy-pdp-content-llm`](https://github.com/deepeshgupta12/sy-pdp-content-llm)**  
