@@ -4,13 +4,14 @@
 
 6+ years across **B2B · B2C · D2C · B2B2C** — marketplaces, data platforms, and internal tools. I turn messy, ambiguous problem spaces into crisp product bets with success metrics, then prototype the fastest path to *"does this work?"* before scaling.
 
-**Core focus:** agentic AI systems · multi-agent orchestration · marketplace discovery · real-estate intelligence · evidence-grounded LLM systems (with evals) · recommendation engines · geo/data analytics · pricing engines · consumer pain intelligence
+**Core focus:** agentic AI systems · multi-agent orchestration · marketplace discovery · real-estate intelligence · evidence-grounded LLM systems (with evals) · recommendation engines · geo/data analytics · pricing engines · consumer pain intelligence · SEO/AEO content platforms
 
 ---
 
 ## 🗂️ What You'll Find Here
 
 A mix of:
+- **Live products** — fully deployed, production-running platforms with real users and real infrastructure
 - **Agentic AI systems** — multi-agent pipelines, orchestrated workflows, safety governance, and autonomous task execution
 - **Production-minded prototypes** — projects I'd confidently harden and plug into a real system
 - **AI/ML systems** — LLM workflows, recommender stacks, applied ML/CV, and evaluation tooling
@@ -24,19 +25,25 @@ Most repos start from a **real product problem** — not a tutorial.
 ## 🛠️ Tech I Use
 
 **Backend (APIs + services)**
-FastAPI · Pydantic v2 · async patterns · dependency injection · structured error handling · request/response contracts · pagination · idempotency · service-first design
+FastAPI · Pydantic v2 · async patterns · dependency injection · structured error handling · request/response contracts · pagination · idempotency · service-first design · SQLAlchemy 2.x · Alembic migrations
 
 **Data stores**
-Postgres + pgvector (embeddings, similarity search, hybrid retrieval) · MongoDB · SQLite (local-first prototypes, snapshot-driven pipelines) · Alembic migrations
+Postgres + pgvector (embeddings, similarity search, hybrid retrieval) · MongoDB · SQLite (local-first prototypes, snapshot-driven pipelines) · Redis (session cache, broker, Celery backend)
 
 **Retrieval & search**
-Elastic-style search patterns (filters, faceting, ranking) · lexical + semantic retrieval · hybrid strategies · chunking · reranking · thresholding + refusal conditions · pgvector cosine similarity
+Elastic-style search patterns (filters, faceting, ranking) · lexical + semantic retrieval · hybrid strategies · chunking · reranking · thresholding + refusal conditions · pgvector cosine similarity · Fuse.js fuzzy matching
 
 **Agentic AI systems**
-LangGraph multi-agent orchestration · agent role specialisation · inter-agent handoffs · safety governance layers · crisis detection pipelines · policy centers · PII masking · audit logging · human-in-the-loop oversight · memory systems (short-term + long-term)
+LangGraph multi-agent orchestration · agent role specialisation · inter-agent handoffs · safety governance layers · crisis detection pipelines · policy centers · PII masking · audit logging · human-in-the-loop oversight · memory systems (short-term + long-term) · checkpoint approval gates · pipeline stage orchestration
 
 **LLM systems (grounded + reliable)**
-RAG with evidence snippets · citation-first answers · structured outputs (JSON schemas) · prompt versioning · guardrails (hallucination control, refusal flows) · eval harnesses (offline checks + spot QA) · "no-claim-without-evidence" pipelines · multi-source intelligence pipelines
+RAG with evidence snippets · citation-first answers · structured outputs (JSON schemas) · prompt versioning · guardrails (hallucination control, refusal flows) · eval harnesses (offline checks + spot QA) · "no-claim-without-evidence" pipelines · multi-source intelligence pipelines · claim extraction + YMYL safety layers
+
+**SEO/AEO content systems**
+Programmatic content pipelines · keyword cluster agents · SEO brief generation · FAQ/snippet optimisation · JSON-LD schema injection (Article, FAQ, Breadcrumb, NewsArticle) · canonical tags + OG metadata · XML sitemap generation · internal linking engines · cannibalization detection · content refresh engines · headless CMS architectures
+
+**Analytics & CDP**
+First-party event tracking (consent-gated) · anonymous identity + session management · UTM attribution · identity stitching · funnel builder (dynamic + preset templates) · cohort heatmaps · audience segment builder · user activity timelines · Google Search Console integration · DPDP Act 2023 compliance (data export, right-to-delete)
 
 **Pricing & analytical engines**
 Six-factor data-driven pricing models · forward projection with scenario analysis (bear/base/bull) · sensitivity analysis across key drivers · confidence scoring · factor contribution decomposition · multi-scenario comparison
@@ -51,23 +58,36 @@ Pandas · feature engineering · time-decay features · rule + heuristic layers 
 scikit-learn baselines · CatBoost/LightGBM-style approaches · train/val splits · leakage checks · model persistence · batch + realtime inference
 
 **Recommender systems**
-Candidate generation (popularity · item-item similarity · collaborative filtering) · ranking models · feedback loops · metrics: hit-rate@k / nDCG
+Candidate generation (popularity · item-item similarity · collaborative filtering) · ranking models · feedback loops · metrics: hit-rate@k / nDCG · pgvector-powered semantic recommendations
+
+**Monetisation systems**
+AdSense slot components · affiliate cards + comparison modules · lead capture forms · digital product catalogs · Razorpay checkout (test + live) · HMAC download token delivery · intent-aware module selection · A/B testing (intent-based vs static) · Stripe recurring billing · premium content gating
 
 **Geo & analytics**
 Mapbox GL JS · vector tiles · geospatial aggregation · choropleths · polygon/multipolygon handling · EPSG:4326 schemas · exports (PNG/CSV) · shareable URLs
 
 **Frontend (when needed)**
-Next.js/React · TypeScript · Tailwind CSS · Recharts · Streamlit for rapid UIs · lightweight HTML/CSS for report rendering and previews
+Next.js 14 (App Router) · React · TypeScript · Tailwind CSS · Recharts · Streamlit for rapid UIs · lightweight HTML/CSS for report rendering and previews · Framer Motion
 
 **Infra & ops (local-first → production-ready)**
-Docker + docker-compose · ARQ + Redis (background jobs) · Prometheus · Sentry · Alembic · env management · background jobs/queues · logging · basic observability patterns · reproducible repo hygiene
+Docker + docker-compose · Celery + Celery Beat · ARQ + Redis (background jobs) · DigitalOcean App Platform · managed Postgres + Valkey · Prometheus · Sentry · env management · background jobs/queues · logging · basic observability patterns · reproducible repo hygiene
 
 **Testing & quality**
-pytest-style tests · contract tests for APIs · schema validation tests · golden files for deterministic generation · regression checks for prompt changes
+pytest-style tests · Playwright E2E · contract tests for APIs · schema validation tests · golden files for deterministic generation · regression checks for prompt changes
 
 ---
 
 ## 📌 Best Walkthrough Repos
+
+### 🚀 Live Products
+
+> Fully deployed, production-running platforms — not prototypes. Real infrastructure, real users, real traffic.
+
+| Product | What It Is |
+|---------|------------|
+| [**trekyatra**](https://github.com/deepeshgupta12/trekyatra) · [🌐 trekyatra.co.in](https://www.trekyatra.co.in) | **AI-powered trekking content platform.** Discovers high-opportunity trek topics via trend + keyword agents, generates SEO/AEO-optimised long-form guides through a 12-agent LangGraph pipeline, publishes through a custom headless CMS with human approval gates, and monetises via AdSense, affiliate cards, lead forms, Razorpay digital products, and Stripe subscriptions. Full CDP analytics layer (funnel builder, cohort heatmaps, segment builder, DPDP compliance), operator marketplace, trip planning wizard, multilingual content (Hindi), and 581 backend tests. Deployed on DigitalOcean BLR1. Next.js 14 · FastAPI · PostgreSQL + pgvector · Redis · Celery · LangGraph · Claude. |
+
+---
 
 ### 🧠 Computer Vision · Applied ML · Data Science · LLM/RAG Fundamentals
 
@@ -137,6 +157,8 @@ pytest-style tests · contract tests for APIs · schema validation tests · gold
 - Partner deeply with engineering/design/data (high technical fluency)
 - Prefer **evidence over vibes**: evaluation, guardrails, measurable outcomes
 - Use AI + automation as leverage — not decoration
+- Ship to production, not just to demos: real infra, real monitoring, real edge cases handled
+- Write to think — documenting architecture, agent contracts, and product bets as I build
 
 ---
 
@@ -158,15 +180,18 @@ pytest-style tests · contract tests for APIs · schema validation tests · gold
 
 **Geo + decision intelligence at scale** — multi-layer geo rendering, metric overlays, performant choropleths, and config-over-code onboarding for new cities/datasets.
 
-**Content systems with control** — template-driven generation, SEO hygiene, structured outputs, and strict validation so content is predictable and debuggable.
+**Content systems with control** — template-driven generation, SEO/AEO hygiene, structured outputs, strict validation so content is predictable and debuggable, and headless CMS architectures that scale programmatically.
 
 **Agentic AI architectures** — LangGraph-driven multi-agent pipelines, role-specialised agents, inter-agent communication protocols, safety governance, crisis detection, human oversight loops, and policy-enforced artifact generation at scale.
 
 **Trust layers in marketplaces** — review intelligence, credibility signals, persona-fit tagging, and deterministic-enough summarization to ship.
+
+**First-party analytics and CDP systems** — event taxonomy governance, funnel/cohort/segment infrastructure, identity stitching, and DPDP-compliant data platforms built from scratch.
 
 ---
 
 ## 🤝 Connect
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/deepeshkumargupta)
+[![Medium](https://img.shields.io/badge/Medium-000000?style=flat&logo=medium&logoColor=white)](https://medium.com/@guyshazam12)
 [![Email](https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white)](mailto:deepeshkumargupta9891@gmail.com)
